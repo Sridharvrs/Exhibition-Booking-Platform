@@ -1003,7 +1003,7 @@ body {
    NEWSLETTER
    ============================================ */
 
-.newsletter-col p {
+footer .newsletter-col p {
   color: var(--text-muted);
   font-size: 14px;
   line-height: 1.7;
@@ -1011,7 +1011,7 @@ body {
   max-width: 300px;
 }
 
-.newsletter-form {
+footer .newsletter-form {
   display: flex;
   width: 100%;
   max-width: 330px;
@@ -1022,7 +1022,7 @@ body {
   margin-bottom: 14px;
 }
 
-.newsletter-form input {
+footer .newsletter-form input {
   flex: 1;
   min-width: 0;
   border: none;
@@ -1033,11 +1033,11 @@ body {
   font-size: 14px;
 }
 
-.newsletter-form input::placeholder {
+footer .newsletter-form input::placeholder {
   color: var(--text-muted);
 }
 
-.newsletter-form button {
+footer .newsletter-form button {
   width: 48px;
   border: none;
   background: var(--primary);
@@ -1047,11 +1047,11 @@ body {
   transition: background 0.3s ease;
 }
 
-.newsletter-form button:hover {
+footer .newsletter-form button:hover {
   background: var(--primary-dark);
 }
 
-.newsletter-col small {
+footer .newsletter-col small {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -1059,6 +1059,6 @@ body {
   font-size: 12px;
 }
 
-.newsletter-col small i {
+footer .newsletter-col small i {
   color: var(--primary);
 }
