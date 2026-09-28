@@ -1,0 +1,355 @@
+/* =========================================================
+   STACKLY ERROR PAGE
+   Premium Exhibition Booking Platform
+   ========================================================= */
+
+.error-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #15110d;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.error-background {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("../images/bg2.webp")
+    center / cover no-repeat;
+
+  transform: scale(1.04);
+}
+
+.error-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(21,17,13,0.97) 0%,
+      rgba(21,17,13,0.88) 45%,
+      rgba(21,17,13,0.72) 100%
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+   ========================================================= */
+
+.error-decoration {
+  position: absolute;
+  border: 1px solid rgba(212,145,94,0.22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.error-decoration-one {
+  width: 520px;
+  height: 520px;
+  top: -260px;
+  right: -180px;
+}
+
+.error-decoration-two {
+  width: 380px;
+  height: 380px;
+  bottom: -210px;
+  left: -160px;
+  border-color: rgba(232,197,71,0.16);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.error-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 90%);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.error-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--primary-light);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+
+  margin-bottom: 25px;
+}
+
+.error-eyebrow span {
+  width: 40px;
+  height: 1px;
+  background: var(--primary);
+}
+
+
+/* =========================================================
+   404 NUMBER
+   ========================================================= */
+
+.error-number {
+  font-family: var(--font-heading);
+
+  font-size: clamp(8rem, 20vw, 15rem);
+
+  line-height: 0.8;
+
+  font-weight: 400;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(212,145,94,0.65);
+
+  text-shadow:
+    0 0 60px rgba(212,145,94,0.08);
+
+  letter-spacing: -0.06em;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.error-content h1 {
+  margin: 0;
+
+  color: #fff8ed;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.02em;
+}
+
+.error-content h1 em {
+  display: block;
+
+  color: var(--primary-light);
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.error-content p {
+  max-width: 590px;
+
+  margin: 25px auto 35px;
+
+  color: #b9afa2;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.error-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 55px;
+}
+
+
+/* PRIMARY BUTTON */
+
+.error-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+}
+
+.error-primary-btn i {
+  font-size: 0.85rem;
+}
+
+
+/* SECONDARY LINK */
+
+.error-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #f5ede0;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--primary);
+
+  padding-bottom: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.error-secondary-btn span {
+  font-size: 1.1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.error-secondary-btn:hover {
+  color: var(--primary-light);
+}
+
+.error-secondary-btn:hover span {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   BOTTOM MESSAGE
+   ========================================================= */
+
+.error-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  color: #817668;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.error-line {
+  width: 70px;
+  height: 1px;
+
+  background: rgba(255,255,255,0.12);
+}
+
+.error-bottom i {
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .error-content {
+    padding: 50px 10px;
+  }
+
+  .error-eyebrow {
+    font-size: 0.6rem;
+    gap: 9px;
+  }
+
+  .error-eyebrow span {
+    width: 25px;
+  }
+
+  .error-number {
+    font-size: 8rem;
+    margin-bottom: 25px;
+  }
+
+  .error-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .error-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .error-actions {
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+  }
+
+  .error-primary-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .error-bottom {
+    gap: 10px;
+    font-size: 0.58rem;
+  }
+
+  .error-line {
+    width: 25px;
+  }
+
+  .error-decoration-one {
+    width: 350px;
+    height: 350px;
+  }
+
+  .error-decoration-two {
+    width: 260px;
+    height: 260px;
+  }
+}
