@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Stall — Stackly</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="booking.html">Book a Stall</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="drawer-close" aria-label="Close">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="booking.html">Book a Stall</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="nav-cta">Login</a>
+
+    <!-- ===== DRAWER CONTACT DETAILS ===== -->
+    <div class="drawer-contact">
+
+      <div class="drawer-contact-title">
+        <span>CONTACT US</span>
+      </div>
+
+      <a href="tel:+18005550198" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-phone"></i>
+        </span>
+        <span>
+          <small>Call Us</small>
+          +1 800 555 0198
+        </span>
+      </a>
+
+      <a href="mailto:hello@Stackly.com" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span>
+          <small>Email</small>
+          hello@Stackly.com
+        </span>
+      </a>
+
+      <div class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-location-dot"></i>
+        </span>
+        <span>
+          <small>Studio</small>
+          Berlin, Germany
+        </span>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- ===== SECTION 1: BANNER ===== -->
+  <section class="booking-banner">
+    <div class="bb-bg"></div>
+    <div class="bb-overlay"></div>
+    <div class="container bb-content">
+      <h1 class="reveal-scale">Book Your Stall</h1>
+      <p class="reveal reveal-delay-1">Select your exhibition, choose your stall, and confirm in minutes.</p>
+      <div class="breadcrumb reveal reveal-delay-2"><a href="index.html">Home</a> / <span>Book a Stall</span></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: STEP INDICATOR ===== -->
+  <section class="step-indicator-section">
+    <div class="container">
+      <div class="step-indicator reveal">
+        <div class="si-item active" data-step="1">
+          <div class="si-circle">1</div>
+          <span>Exhibition</span>
+        </div>
+        <div class="si-line"></div>
+        <div class="si-item" data-step="2">
+          <div class="si-circle">2</div>
+          <span>Stall Type</span>
+        </div>
+        <div class="si-line"></div>
+        <div class="si-item" data-step="3">
+          <div class="si-circle">3</div>
+          <span>Details</span>
+        </div>
+        <div class="si-line"></div>
+        <div class="si-item" data-step="4">
+          <div class="si-circle">4</div>
+          <span>Confirm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: EXHIBITION SELECTION ===== -->
+  <section class="section select-exhibition" id="step1">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Step 1 — Select Exhibition</h2>
+        <div class="accent-line"></div>
+        <p>Choose the exhibition you want to participate in.</p>
+      </div>
+      <div class="select-grid">
+        <label class="select-card reveal-scale" data-exhib="art-fair">
+          <input type="radio" name="exhibition" value="art-fair" checked>
+          <div class="select-inner">
+            <img src="images/home1.webp" alt="Art Fair">
+            <h3>Contemporary Art Fair</h3>
+            <p>Berlin · Mar 15–22</p>
+            <span class="select-price">From $450</span>
+          </div>
+        </label>
+        <label class="select-card reveal-scale reveal-delay-1" data-exhib="trade-expo">
+          <input type="radio" name="exhibition" value="trade-expo">
+          <div class="select-inner">
+            <img src="images/home2.webp" alt="Trade Expo">
+            <h3>Global Trade Expo</h3>
+            <p>Shanghai · Apr 5–12</p>
+            <span class="select-price">From $680</span>
+          </div>
+        </label>
+        <label class="select-card reveal-scale reveal-delay-2" data-exhib="heritage">
+          <input type="radio" name="exhibition" value="heritage">
+          <div class="select-inner">
+            <img src="images/home3.webp" alt="Heritage Show">
+            <h3>Classical Heritage Show</h3>
+            <p>Paris · May 18–25</p>
+            <span class="select-price">From $520</span>
+          </div>
+        </label>
+        <label class="select-card reveal-scale reveal-delay-3" data-exhib="tech-summit">
+          <input type="radio" name="exhibition" value="tech-summit">
+          <div class="select-inner">
+            <img src="images/booking4.webp" alt="Tech Summit">
+            <h3>Tech Innovation Summit</h3>
+            <p>Tokyo · Jun 3–8</p>
+            <span class="select-price">From $750</span>
+          </div>
+        </label>
+      </div>
+      <div class="step-nav reveal">
+        <button class="btn btn-primary" onclick="goToStep(2)">Next: Choose Stall Type &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================
+     PREMIUM SECTION 1: WHY EXHIBIT WITH Stackly
+     ========================================================= -->
+<section class="premium-exhibit-section">
+  <div class="premium-exhibit-bg"></div>
+  <div class="premium-exhibit-overlay"></div>
+
+  <div class="container premium-exhibit-content">
+
+    <div class="premium-section-heading reveal">
+      <span class="premium-eyebrow">WHY Stackly</span>
+      <h2>More Than Just a<br><span>Stall Space</span></h2>
+      <div class="premium-heading-line"></div>
+      <p>
+        Create a memorable exhibition presence with thoughtfully designed
+        spaces, premium facilities and an environment built for meaningful
+        connections.
+      </p>
+    </div>
+
+    <div class="premium-benefits-grid">
+
+      <div class="premium-benefit-card reveal">
+        <div class="premium-benefit-number">01</div>
+        <div class="premium-benefit-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Global Exposure</h3>
+        <p>
+          Present your brand alongside exhibitors and visitors from
+          different industries and destinations.
+        </p>
+      </div>
+
+      <div class="premium-benefit-card reveal">
+        <div class="premium-benefit-number">02</div>
+        <div class="premium-benefit-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3>Premium Spaces</h3>
+        <p>
+          Choose professionally planned exhibition spaces designed to
+          showcase your brand with impact.
+        </p>
+      </div>
+
+      <div class="premium-benefit-card reveal">
+        <div class="premium-benefit-number">03</div>
+        <div class="premium-benefit-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Build Connections</h3>
+        <p>
+          Meet potential partners, customers, professionals and
+          industry communities under one roof.
+        </p>
+      </div>
+
+      <div class="premium-benefit-card reveal">
+        <div class="premium-benefit-number">04</div>
+        <div class="premium-benefit-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>Dedicated Support</h3>
+        <p>
+          From selecting your space to preparing for the event, keep
+          your booking journey simple and organized.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== SECTION 4: STALL TYPE ===== -->
+  <section class="section stall-type-section" id="step2" style="display:none;">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Step 2 — Choose Stall Type</h2>
+        <div class="accent-line"></div>
+        <p>Select the stall size and location that best fits your needs.</p>
+      </div>
+      <div class="stall-grid">
+        <label class="stall-card reveal-scale">
+          <input type="radio" name="stallType" value="standard" checked>
+          <div class="stall-header">
+            <h3>Standard Stall</h3>
+            <span class="stall-size">3m &times; 3m</span>
+          </div>
+          <ul class="stall-features">
+            <li><span class="check-icon">&#10003;</span> Basic booth setup</li>
+            <li><span class="check-icon">&#10003;</span> 2 spotlights</li>
+            <li><span class="check-icon">&#10003;</span> 1 power outlet</li>
+            <li><span class="check-icon">&#10003;</span> Listing in catalog</li>
+          </ul>
+          <div class="stall-price">$450</div>
+        </label>
+        <label class="stall-card reveal-scale reveal-delay-1">
+          <input type="radio" name="stallType" value="premium">
+          <div class="stall-header">
+            <h3>Premium Stall</h3>
+            <span class="stall-size">6m &times; 4m</span>
+          </div>
+          <ul class="stall-features">
+            <li><span class="check-icon">&#10003;</span> Custom booth design</li>
+            <li><span class="check-icon">&#10003;</span> 4 spotlights + LED</li>
+            <li><span class="check-icon">&#10003;</span> 3 power outlets</li>
+            <li><span class="check-icon">&#10003;</span> Featured catalog listing</li>
+            <li><span class="check-icon">&#10003;</span> Social media promotion</li>
+          </ul>
+          <div class="stall-price">$890</div>
+        </label>
+        <label class="stall-card reveal-scale reveal-delay-2">
+          <input type="radio" name="stallType" value="platinum">
+          <div class="stall-header">
+            <h3>Platinum Stall</h3>
+            <span class="stall-size">9m &times; 6m</span>
+          </div>
+          <ul class="stall-features">
+            <li><span class="check-icon">&#10003;</span> Full custom build-out</li>
+            <li><span class="check-icon">&#10003;</span> Professional lighting rig</li>
+            <li><span class="check-icon">&#10003;</span> Dedicated power circuit</li>
+            <li><span class="check-icon">&#10003;</span> Prime floor location</li>
+            <li><span class="check-icon">&#10003;</span> Press &amp; media coverage</li>
+            <li><span class="check-icon">&#10003;</span> VIP lounge access</li>
+          </ul>
+          <div class="stall-price">$1,590</div>
+        </label>
+      </div>
+      <div class="step-nav reveal">
+        <button class="btn btn-secondary" onclick="goToStep(1)">&larr; Back</button>
+        <button class="btn btn-primary" onclick="goToStep(3)">Next: Your Details &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================
+     PREMIUM SECTION 2: EXHIBITION EXPERIENCE
+     ========================================================= -->
+<section class="experience-section">
+
+  <div class="container">
+
+    <div class="experience-wrapper">
+
+      <div class="experience-image reveal-left">
+        <img
+          src="images/mic.webp"
+          alt="Premium exhibition experience"
+        >
+
+        <div class="experience-image-label">
+          <span>Stackly 2026</span>
+          <strong>Designed for Impact</strong>
+        </div>
+      </div>
+
+      <div class="experience-content reveal-right">
+
+        <span class="premium-eyebrow dark-eyebrow">
+          YOUR EXHIBITION EXPERIENCE
+        </span>
+
+        <h2>
+          Turn Your Stall Into
+          <span>A Brand Experience</span>
+        </h2>
+
+        <div class="premium-heading-line"></div>
+
+        <p class="experience-lead">
+          Your exhibition space is more than a physical location.
+          It is where your brand meets people, creates conversations
+          and leaves a lasting impression.
+        </p>
+
+        <div class="experience-features">
+
+          <div class="experience-feature">
+            <span class="experience-feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </span>
+            <div>
+              <h4>Professional Presentation</h4>
+              <p>
+                Create a visually engaging environment for your products
+                and brand story.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-feature">
+            <span class="experience-feature-icon">
+              <i class="fas fa-users"></i>
+            </span>
+            <div>
+              <h4>Visitor Engagement</h4>
+              <p>
+                Design your space to encourage conversations and meaningful
+                interactions.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-feature">
+            <span class="experience-feature-icon">
+              <i class="fas fa-bolt"></i>
+            </span>
+            <div>
+              <h4>Ready-to-Exhibit Facilities</h4>
+              <p>
+                Select a stall package that matches your operational and
+                presentation requirements.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== SECTION 5: DETAILS FORM ===== -->
+  <section class="section details-section" id="step3" style="display:none;">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Step 3 — Your Details</h2>
+        <div class="accent-line"></div>
+        <p>Fill in your exhibitor information to proceed.</p>
+      </div>
+      <form class="details-form reveal-scale" id="detailsForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Company / Organization *</label>
+            <input type="text" name="company" placeholder="Your company" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" name="phone" placeholder="+1 234 567 890" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Country *</label>
+            <select name="country" required>
+              <option value="">Select country</option>
+              <option>United States</option>
+              <option>Germany</option>
+              <option>France</option>
+              <option>China</option>
+              <option>Japan</option>
+              <option>Italy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Number of Representatives *</label>
+            <input type="number" name="reps" min="1" value="2" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Special Requirements</label>
+          <textarea name="notes" rows="3" placeholder="Any additional needs (accessibility, storage, etc.)"></textarea>
+        </div>
+        <div class="step-nav">
+          <button type="button" class="btn btn-secondary" onclick="goToStep(2)">&larr; Back</button>
+          <button type="submit" class="btn btn-primary">Review Booking &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<!-- =========================================================
+     PREMIUM SECTION 3: FEATURED EXHIBITION CITIES
+     ========================================================= -->
+<section class="cities-section">
+
+  <div class="container">
+
+    <div class="premium-section-heading dark-heading reveal">
+      <span class="premium-eyebrow">EXPLORE THE DESTINATIONS</span>
+      <h2>Exhibitions Across<br><span>Iconic Cities</span></h2>
+      <div class="premium-heading-line"></div>
+      <p>
+        Choose the exhibition environment that fits your brand,
+        audience and vision.
+      </p>
+    </div>
+
+    <div class="cities-grid">
+
+      <div class="city-card reveal">
+        <img
+          src="images/home1.webp"
+          alt="Berlin exhibition"
+        >
+        <div class="city-card-overlay"></div>
+
+        <div class="city-card-content">
+          <span>GERMANY</span>
+          <h3>Berlin</h3>
+          <p>Contemporary Art Fair</p>
+          <div class="city-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="city-card reveal">
+        <img
+          src="images/home2.webp"
+          alt="Shanghai exhibition"
+        >
+        <div class="city-card-overlay"></div>
+
+        <div class="city-card-content">
+          <span>CHINA</span>
+          <h3>Shanghai</h3>
+          <p>Global Trade Expo</p>
+          <div class="city-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="city-card reveal">
+        <img
+          src="images/home3.webp"
+          alt="Paris exhibition"
+        >
+        <div class="city-card-overlay"></div>
+
+        <div class="city-card-content">
+          <span>FRANCE</span>
+          <h3>Paris</h3>
+          <p>Classical Heritage Show</p>
+          <div class="city-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="city-card reveal">
+        <img
+          src="images/booking4.webp"
+          alt="Tokyo exhibition"
+        >
+        <div class="city-card-overlay"></div>
+
+        <div class="city-card-content">
+          <span>JAPAN</span>
+          <h3>Tokyo</h3>
+          <p>Tech Innovation Summit</p>
+          <div class="city-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     PREMIUM SECTION 4: HOW BOOKING WORKS
+     ========================================================= -->
+<section class="booking-process-section">
+
+  <div class="booking-process-bg"></div>
+  <div class="booking-process-overlay"></div>
+
+  <div class="container booking-process-content">
+
+    <div class="premium-section-heading reveal">
+      <span class="premium-eyebrow">SIMPLE PROCESS</span>
+      <h2>Book Your Space<br><span>In Four Steps</span></h2>
+      <div class="premium-heading-line"></div>
+      <p>
+        A straightforward booking journey designed to get your
+        exhibition presence ready with minimal effort.
+      </p>
+    </div>
+
+    <div class="process-timeline">
+
+      <div class="process-item reveal">
+        <div class="process-number">01</div>
+        <div class="process-line"></div>
+        <div class="process-icon">
+          <i class="fas fa-calendar-days"></i>
+        </div>
+        <h3>Select Exhibition</h3>
+        <p>
+          Choose the exhibition and destination that fits your goals.
+        </p>
+      </div>
+
+      <div class="process-item reveal">
+        <div class="process-number">02</div>
+        <div class="process-line"></div>
+        <div class="process-icon">
+          <i class="fas fa-store"></i>
+        </div>
+        <h3>Choose Stall</h3>
+        <p>
+          Select the stall size and package that suits your brand.
+        </p>
+      </div>
+
+      <div class="process-item reveal">
+        <div class="process-number">03</div>
+        <div class="process-line"></div>
+        <div class="process-icon">
+          <i class="fas fa-file-pen"></i>
+        </div>
+        <h3>Add Your Details</h3>
+        <p>
+          Enter your contact and organization information.
+        </p>
+      </div>
+
+      <div class="process-item reveal">
+        <div class="process-number">04</div>
+        <div class="process-icon">
+          <i class="fas fa-circle-check"></i>
+        </div>
+        <h3>Confirm Booking</h3>
+        <p>
+          Review your booking and confirm your exhibition space.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== SECTION 6: CONFIRMATION ===== -->
+  <section class="section confirm-section" id="step4" style="display:none;">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Step 4 — Review &amp; Confirm</h2>
+        <div class="accent-line"></div>
+        <p>Please review your booking details before confirming.</p>
+      </div>
+      <div class="confirm-card reveal-scale">
+        <div class="confirm-row">
+          <span class="confirm-label">Exhibition</span>
+          <span class="confirm-value" id="confExhib">—</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">Stall Type</span>
+          <span class="confirm-value" id="confStall">—</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">Name</span>
+          <span class="confirm-value" id="confName">—</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">Company</span>
+          <span class="confirm-value" id="confCompany">—</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">Email</span>
+          <span class="confirm-value" id="confEmail">—</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">Phone</span>
+          <span class="confirm-value" id="confPhone">—</span>
+        </div>
+        <div class="confirm-row highlight-row">
+          <span class="confirm-label">Estimated Total</span>
+          <span class="confirm-value" id="confPrice">—</span>
+        </div>
+        <div class="confirm-actions">
+          <button class="btn btn-secondary" onclick="goToStep(3)">&larr; Edit Details</button>
+          <button class="btn btn-primary" id="confirmBtn">Confirm Booking</button>
+        </div>
+      </div>
+      <div class="booking-success reveal-scale" id="successMsg" style="display:none;">
+        <div class="success-icon">&#10003;</div>
+        <h2>Booking Confirmed!</h2>
+        <p>Your stall has been reserved. A confirmation email with payment details has been sent to your inbox.</p>
+        <a href="error.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: ADD-ONS ===== -->
+  <section class="section addons-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Optional Add-Ons</h2>
+        <div class="accent-line"></div>
+        <p>Enhance your exhibition experience with these extras.</p>
+      </div>
+      <div class="addons-grid">
+        <div class="addon-card reveal-scale">
+          <div class="addon-icon">📸</div>
+          <h3>Professional Photography</h3>
+          <p>Dedicated photographer for your stall throughout the event.</p>
+          <div class="addon-price">$120</div>
+        </div>
+        <div class="addon-card reveal-scale reveal-delay-1">
+          <div class="addon-icon">🍽️</div>
+          <h3>Catering Package</h3>
+          <p>Premium food and beverage service for your team and guests.</p>
+          <div class="addon-price">$200</div>
+        </div>
+        <div class="addon-card reveal-scale reveal-delay-2">
+          <div class="addon-icon">📺</div>
+          <h3>AV Equipment</h3>
+          <p>4K display, sound system, and presentation setup.</p>
+          <div class="addon-price">$180</div>
+        </div>
+        <div class="addon-card reveal-scale reveal-delay-3">
+          <div class="addon-icon">📡</div>
+          <h3>High-Speed Wi-Fi</h3>
+          <p>Dedicated bandwidth for demos and live streaming.</p>
+          <div class="addon-price">$75</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================
+     PREMIUM SECTION 5: FINAL CTA
+     ========================================================= -->
+<section class="final-booking-cta">
+
+  <div class="final-cta-bg"></div>
+  <div class="final-cta-overlay"></div>
+
+  <div class="container final-cta-content reveal-scale">
+
+    <span class="premium-eyebrow">READY TO EXHIBIT?</span>
+
+    <h2>
+      Your Space.<br>
+      Your Brand.<br>
+      <span>Your Moment.</span>
+    </h2>
+
+    <p>
+      Take your place at an unforgettable exhibition experience.
+      Select your event, choose your space and start your journey
+      with Stackly.
+    </p>
+
+    <a href="error.html" class="btn premium-cta-button">
+      Book Your Stall
+      <i class="fas fa-arrow-right"></i>
+    </a>
+
+  </div>
+
+</section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>The world's leading platform for discovering and booking exhibition stalls. Connecting artists, brands, and venues since 2018.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></i></a>
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></i></a>
+            <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="booking.html">Book a Stall</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Terms&Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="booking.html">Booking Guide</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <form class="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                aria-label="Email address"
+                required
+              >
+              <button type="submit" aria-label="Subscribe">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved. Designed for exhibitors worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exhibitor Portal · ExpoDock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/exhibitor.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-target="overview">
+        <span class="tag">01</span><span class="label">Overview</span>
+      </button>
+      <button class="nav-item" data-target="browse">
+        <span class="tag">02</span><span class="label">Browse exhibitions</span>
+      </button>
+      <button class="nav-item" data-target="floorplan">
+        <span class="tag">03</span><span class="label">Pick a stall</span>
+      </button>
+      <button class="nav-item" data-target="mybookings">
+        <span class="tag">04</span><span class="label">My bookings</span>
+      </button>
+      <button class="nav-item" data-target="invoices">
+        <span class="tag">05</span><span class="label">Invoices</span>
+        <span class="pill" id="invoicePill">2</span>
+      </button>
+      <button class="nav-item" data-target="company">
+        <span class="tag">06</span><span class="label">Company profile</span>
+      </button>
+      <button class="nav-item" data-target="support">
+        <span class="tag">07</span><span class="label">Support</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="user-chip">
+        <span class="avatar avatarLetter">KT</span>
+        <div class="user-meta">
+          <strong class="profileName">Kavya Textiles</strong>
+          <small>Exhibitor account</small>
+        </div>
+      </div>
+      <button class="logout-btn" id="logoutBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log out
+      </button>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">
+        <span class="crumb" id="topbarCrumb">Overview</span>
+      </div>
+      <div class="topbar-right">
+        <span class="badge-live"><i></i>2 bookings confirmed</span>
+        <button class="icon-btn" title="Notifications">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="dot"></span>
+        </button>
+        <button class="logout-btn ghost" id="logoutBtnTop">Log out</button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- 01 OVERVIEW -->
+      <section class="module active" id="overview">
+        <div class="module-head">
+          <h1>Welcome back, <span class="profileName">Exhibitor</span></h1>
+          <p>Here's where your bookings and invoices stand today.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-label">Upcoming bookings</span>
+            <strong class="stat-value">2</strong>
+            <span class="stat-note">Next: Textile Expo, 14 Jun</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Stalls held</span>
+            <strong class="stat-value">3</strong>
+            <span class="stat-note">Across 2 exhibitions</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Unpaid invoices</span>
+            <strong class="stat-value">2</strong>
+            <span class="stat-note warn">₹9,800 due</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Open for booking</span>
+            <strong class="stat-value">6</strong>
+            <span class="stat-note up">New this week</span>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Your upcoming stalls</h2>
+              <button class="link-btn" data-nav="mybookings">View all</button>
+            </div>
+            <ul class="mini-list">
+              <li><span class="dow">14 JUN</span><span class="mini-title">Textile &amp; Craft Expo</span><span class="mini-sub">Stall A-14 · Hall A</span><span class="chip chip-green">Confirmed</span></li>
+              <li><span class="dow">09 JUN</span><span class="mini-title">Textile &amp; Craft Expo</span><span class="mini-sub">Stall A-05 · Hall A</span><span class="chip chip-amber">Pending</span></li>
+              <li><span class="dow">03 JUL</span><span class="mini-title">Auto Components Meet</span><span class="mini-sub">Stall C-22 · Hall C</span><span class="chip chip-green">Confirmed</span></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Notices</h2>
+            </div>
+            <ul class="mini-list">
+              <li><span class="mini-title">Move-in starts 12 Jun, 8 AM</span><span class="mini-sub">Textile &amp; Craft Expo · Hall A gate 2</span></li>
+              <li><span class="mini-title">Invoice INV-2208 due in 3 days</span><span class="mini-sub">₹4,200 · Textile Expo booking</span></li>
+              <li><span class="mini-title">Booth panels must be under 2.4m</span><span class="mini-sub">Venue guideline · all halls</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 BROWSE EXHIBITIONS -->
+      <section class="module" id="browse">
+        <div class="module-head">
+          <h1>Browse exhibitions</h1>
+          <p>Find an event and request a stall while space lasts.</p>
+        </div>
+
+        <div class="filter-row">
+          <button class="chip-filter active">All</button>
+          <button class="chip-filter">Trade</button>
+          <button class="chip-filter">Consumer</button>
+          <button class="chip-filter">Tech</button>
+        </div>
+
+        <div class="card-grid">
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-amber">Filling fast</span><span class="expo-cat">Consumer</span></div>
+            <h3>Textile &amp; Craft Expo</h3>
+            <p class="muted">Hall A · 14–17 Jun · 13 stalls left of 64</p>
+            <div class="expo-foot"><strong>From ₹4,200 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-green">On track</span><span class="expo-cat">Trade</span></div>
+            <h3>FoodTech Southeast</h3>
+            <p class="muted">Hall B · 22–24 Jun · 17 stalls left of 48</p>
+            <div class="expo-foot"><strong>From ₹5,000 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-slate">Open</span><span class="expo-cat">Trade</span></div>
+            <h3>Auto Components Meet</h3>
+            <p class="muted">Hall C · 03–06 Jul · 30 stalls left of 90</p>
+            <div class="expo-foot"><strong>From ₹4,800 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-slate">Open</span><span class="expo-cat">Consumer</span></div>
+            <h3>Handloom Bazaar</h3>
+            <p class="muted">Hall A · 19–21 Jul · 40 stalls left of 58</p>
+            <div class="expo-foot"><strong>From ₹3,600 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-slate">Open</span><span class="expo-cat">Tech</span></div>
+            <h3>Consumer Electronics Fair</h3>
+            <p class="muted">Hall B · 12–15 Sep · 44 stalls left of 44</p>
+            <div class="expo-foot"><strong>From ₹6,200 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+          <div class="expo-card">
+            <div class="expo-card-top"><span class="chip chip-slate">Open</span><span class="expo-cat">Trade</span></div>
+            <h3>Print &amp; Packaging Show</h3>
+            <p class="muted">Hall C · 04–06 Oct · 40 stalls left of 40</p>
+            <div class="expo-foot"><strong>From ₹4,000 / day</strong><button class="primary-btn small" data-nav="floorplan">Pick a stall</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 FLOOR PLAN / PICK A STALL -->
+      <section class="module" id="floorplan">
+        <div class="module-head row">
+          <div>
+            <h1>Pick a stall</h1>
+            <p>Choose an available stall, then send a booking request.</p>
+          </div>
+          <select class="select" id="expoSelect">
+            <option>Textile &amp; Craft Expo — Hall A</option>
+            <option>FoodTech Southeast — Hall B</option>
+            <option>Auto Components Meet — Hall C</option>
+          </select>
+        </div>
+
+        <div class="legend">
+          <span><i class="sw sw-available"></i>Available</span>
+          <span><i class="sw sw-mine"></i>Your stall</span>
+          <span><i class="sw sw-booked"></i>Taken</span>
+          <span><i class="sw sw-blocked"></i>Not for booking</span>
+        </div>
+
+        <div class="floor-wrap">
+          <div class="floor-grid" id="floorGrid"></div>
+
+          <aside class="stall-detail" id="stallDetail">
+            <h3>Select a stall</h3>
+            <p class="muted">Pricing and size will appear here.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 04 MY BOOKINGS -->
+      <section class="module" id="mybookings">
+        <div class="module-head">
+          <h1>My bookings</h1>
+          <p>Every stall you've requested, across every exhibition.</p>
+        </div>
+
+        <div class="filter-row">
+          <button class="chip-filter active" data-status="all">All · 4</button>
+          <button class="chip-filter" data-status="pending">Pending · 1</button>
+          <button class="chip-filter" data-status="confirmed">Confirmed · 2</button>
+          <button class="chip-filter" data-status="cancelled">Cancelled · 1</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exhibition</th><th>Stall</th><th>Dates</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+            <tbody id="bookingsBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 05 INVOICES -->
+      <section class="module" id="invoices">
+        <div class="module-head">
+          <h1>Invoices &amp; payments</h1>
+          <p>Keep bookings active by settling invoices before their due date.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Invoice</th><th>Exhibition</th><th>Amount</th><th>Due</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><strong>INV-2208</strong></td><td>Textile &amp; Craft Expo</td><td>₹4,200</td><td>12 Jun</td><td><span class="chip chip-red">Overdue</span></td><td><button class="row-btn">Pay now</button></td></tr>
+              <tr><td><strong>INV-2211</strong></td><td>Textile &amp; Craft Expo</td><td>₹5,600</td><td>18 Jun</td><td><span class="chip chip-amber">Unpaid</span></td><td><button class="row-btn">Pay now</button></td></tr>
+              <tr><td><strong>INV-2179</strong></td><td>Auto Components Meet</td><td>₹16,400</td><td>28 May</td><td><span class="chip chip-green">Paid</span></td><td><button class="row-btn">Download</button></td></tr>
+              <tr><td><strong>INV-2140</strong></td><td>Consumer Electronics Fair</td><td>₹6,200</td><td>02 May</td><td><span class="chip chip-green">Paid</span></td><td><button class="row-btn">Download</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>Payment method</h2></div>
+          <div class="pay-method">
+            <span class="req-avatar">VC</span>
+            <div>
+              <strong>Visa •••• 4471</strong>
+              <p class="muted">Expires 08/28 · Default method</p>
+            </div>
+            <button class="row-btn">Change</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 COMPANY PROFILE -->
+      <section class="module" id="company">
+        <div class="module-head">
+          <h1>Company profile</h1>
+          <p>This appears on your booking requests and stall badge.</p>
+        </div>
+
+        <div class="split-grid">
+          <div class="panel">
+            <div class="panel-head"><h2>Company details</h2></div>
+            <form class="form-grid" id="profileForm">
+              <label>Company name<input type="text" value="Kavya Textiles"></label>
+              <label>Industry<input type="text" value="Apparel &amp; craft"></label>
+              <label>Contact person<input type="text" value="Kavya Suresh"></label>
+              <label>Email<input type="email" value="kavya@kavyatextiles.in"></label>
+              <label>Phone<input type="tel" value="+91 98765 43210"></label>
+              <label>Registered address<input type="text" value="14, Weavers Colony, Erode, TN"></label>
+              <button class="primary-btn" type="submit">Save changes</button>
+            </form>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>Verification</h2></div>
+            <ul class="mini-list">
+              <li><span class="mini-title">GST certificate</span><span class="mini-sub">Uploaded 12 Mar</span><span class="chip chip-green">Verified</span></li>
+              <li><span class="mini-title">Trade license</span><span class="mini-sub">Uploaded 12 Mar</span><span class="chip chip-green">Verified</span></li>
+              <li><span class="mini-title">Bank details</span><span class="mini-sub">For payouts &amp; refunds</span><span class="chip chip-amber">Pending</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 SUPPORT -->
+      <section class="module" id="support">
+        <div class="module-head">
+          <h1>Support</h1>
+          <p>Answers to common questions, or reach the venue team directly.</p>
+        </div>
+
+        <div class="split-grid">
+          <div class="panel accordion" id="faqPanel">
+            <div class="panel-head"><h2>Frequently asked</h2></div>
+            <div class="faq-item">
+              <button class="faq-q">How do I cancel a pending booking?</button>
+              <div class="faq-a">Open <strong>My bookings</strong>, find the request, and use the cancel action. Confirmed bookings follow the venue's refund policy.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">When is my stall confirmed?</button>
+              <div class="faq-a">A request moves to Confirmed once the organizer approves it and your invoice is paid — usually within 2 business days.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Can I move to a different stall?</button>
+              <div class="faq-a">Yes, before move-in. Cancel the current request from My bookings, then pick a new stall from the floor plan.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h2>Contact the venue team</h2></div>
+            <form class="form-grid" id="supportForm">
+              <label>Your name<input type="text" value="Kavya Suresh"></label>
+              <label>Subject<input type="text" placeholder="e.g. Payment not reflecting"></label>
+              <label>Message<textarea rows="4" placeholder="Tell us what's going on…"></textarea></label>
+              <button class="primary-btn" type="submit">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- LOGOUT CONFIRM -->
+<div class="modal-backdrop" id="logoutModal">
+  <div class="modal">
+    <h3>Log out of ExpoDock?</h3>
+    <p>You'll need to sign in again to manage your bookings.</p>
+    <div class="modal-actions">
+      <button class="ghost-btn" id="cancelLogout">Stay signed in</button>
+      <button class="danger-btn" id="confirmLogout">Log out</button>
+    </div>
+  </div>
+</div>
+
+<div class="loggedout-screen" id="loggedOutScreen">
+  <div class="loggedout-card">
+    <span class="brand-mark">ED</span>
+    <h2>You've been logged out</h2>
+    <p>Your exhibitor session on ExpoDock has ended.</p>
+    <button class="primary-btn" id="loginAgain">Sign back in</button>
+  </div>
+</div>
+
+<script src="js/exhibitor.js"></script>
+</body>
+</html>

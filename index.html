@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Premier Exhibition Booking Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="booking.html">Book a Stall</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="drawer-close" aria-label="Close">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="booking.html">Book a Stall</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="nav-cta">Login</a>
+
+    <!-- ===== DRAWER CONTACT DETAILS ===== -->
+    <div class="drawer-contact">
+
+      <div class="drawer-contact-title">
+        <span>CONTACT US</span>
+      </div>
+
+      <a href="tel:+18005550198" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-phone"></i>
+        </span>
+        <span>
+          <small>Call Us</small>
+          +1 800 555 0198
+        </span>
+      </a>
+
+      <a href="mailto:hello@Stackly.com" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span>
+          <small>Email</small>
+          hello@Stackly.com
+        </span>
+      </a>
+
+      <div class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-location-dot"></i>
+        </span>
+        <span>
+          <small>Studio</small>
+          Berlin, Germany
+        </span>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-tag reveal-scale">World-Class Exhibitions, One Platform</p>
+      <h1 class="hero-title reveal reveal-delay-1">Discover &amp; Book<br>Premier Exhibitions</h1>
+      <p class="hero-subtitle reveal reveal-delay-2">From contemporary art fairs to international trade shows — explore curated exhibitions and reserve your stall in seconds.</p>
+      <div class="hero-btns reveal reveal-delay-3">
+        <a href="error.html" class="btn btn-primary">Explore Exhibitions</a>
+        <a href="error.html" class="btn btn-secondary">Book a Stall</a>
+      </div>
+      <div class="hero-scroll reveal reveal-delay-4">
+        <span>Scroll to explore</span>
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: STATS ===== -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal-scale">
+          <div class="stat-icon">🎨</div>
+          <div class="stat-number" data-count="250" data-suffix="+">0</div>
+          <div class="stat-label">Exhibitions Hosted</div>
+        </div>
+        <div class="stat-card reveal-scale reveal-delay-1">
+          <div class="stat-icon">🏢</div>
+          <div class="stat-number" data-count="180" data-suffix="+">0</div>
+          <div class="stat-label">Exhibitors Registered</div>
+        </div>
+        <div class="stat-card reveal-scale reveal-delay-2">
+          <div class="stat-icon">👥</div>
+          <div class="stat-number" data-count="50000" data-suffix="+">0</div>
+          <div class="stat-label">Visitors Served</div>
+        </div>
+        <div class="stat-card reveal-scale reveal-delay-3">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-number" data-count="35" data-suffix="">0</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: FEATURED EXHIBITIONS ===== -->
+  <section class="section featured-section" id="featured">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Featured Exhibitions</h2>
+        <div class="accent-line"></div>
+        <p>Hand-picked exhibitions happening right now and coming soon.</p>
+      </div>
+      <div class="featured-grid">
+        <div class="featured-card reveal-scale">
+          <img src="images/booking1.webp" alt="Contemporary Art Fair">
+          <div class="featured-body">
+            <span class="featured-badge">Art</span>
+            <h3>Contemporary Art Fair 2026</h3>
+            <p class="featured-meta">Mar 15–22 · Berlin, Germany</p>
+            <p class="featured-desc">Over 200 artists showcasing boundary-pushing works across painting, sculpture, and digital media.</p>
+            <a href="error.html" class="btn btn-outline">Book Now</a>
+          </div>
+        </div>
+        <div class="featured-card reveal-scale reveal-delay-1">
+          <img src="images/home2.webp" alt="Global Trade Expo">
+          <div class="featured-body">
+            <span class="featured-badge">Trade</span>
+            <h3>Global Trade Expo</h3>
+            <p class="featured-meta">Apr 5–12 · Shanghai, China</p>
+            <p class="featured-desc">Connect with 500+ exhibitors across technology, manufacturing, and consumer goods sectors.</p>
+            <a href="error.html" class="btn btn-outline">Book Now</a>
+          </div>
+
+        </div>
+        <div class="featured-card reveal-scale reveal-delay-2">
+          <img src="images/home3.webp" alt="Classical Heritage Show">
+          <div class="featured-body">
+            <span class="featured-badge">Heritage</span>
+            <h3>Classical Heritage Show</h3>
+            <p class="featured-meta">May 18–25 · Paris, France</p>
+            <p class="featured-desc">A curated journey through classical paintings, marble sculptures, and rare antiquities.</p>
+            <a href="error.html" class="btn btn-outline">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ==========================================
+     PREMIUM HOW IT WORKS
+========================================== -->
+<section class="premium-how-section" id="how-it-works">
+
+  <div class="premium-how-bg"></div>
+
+  <div class="premium-how-overlay"></div>
+
+  <div class="container premium-how-container">
+
+    <div class="premium-section-intro reveal">
+      <span class="premium-eyebrow">THE Stackly JOURNEY</span>
+
+      <h2>
+        From Discovery
+        <span>to Experience.</span>
+      </h2>
+
+      <p>
+        Discover remarkable exhibitions, reserve your place,
+        and experience the world of culture, creativity and commerce.
+      </p>
+    </div>
+
+
+    <div class="how-timeline">
+
+      <!-- STEP 01 -->
+      <div class="how-step reveal">
+
+        <div class="how-step-number">01</div>
+
+        <div class="how-step-line"></div>
+
+        <div class="how-step-content">
+
+          <span class="how-step-label">DISCOVER</span>
+
+          <h3>Find Your Exhibition</h3>
+
+          <p>
+            Explore curated exhibitions, cultural showcases,
+            trade events and creative experiences from around the world.
+          </p>
+
+          <a href="error.html" class="how-step-link">
+            Explore Exhibitions
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- STEP 02 -->
+      <div class="how-step reveal">
+
+        <div class="how-step-number">02</div>
+
+        <div class="how-step-line"></div>
+
+        <div class="how-step-content">
+
+          <span class="how-step-label">CHOOSE</span>
+
+          <h3>Select Your Experience</h3>
+
+          <p>
+            Choose the exhibition, date and experience
+            that matches your interests and expectations.
+          </p>
+
+          <a href="error.html" class="how-step-link">
+            View Experiences
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- STEP 03 -->
+      <div class="how-step reveal">
+
+        <div class="how-step-number">03</div>
+
+        <div class="how-step-line"></div>
+
+        <div class="how-step-content">
+
+          <span class="how-step-label">RESERVE</span>
+
+          <h3>Book Your Place</h3>
+
+          <p>
+            Secure visitor passes or exhibition stalls
+            through a simple and seamless booking process.
+          </p>
+
+          <a href="error.html" class="how-step-link">
+            Book Now
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- STEP 04 -->
+      <div class="how-step reveal">
+
+        <div class="how-step-number">04</div>
+
+        <div class="how-step-line"></div>
+
+        <div class="how-step-content">
+
+          <span class="how-step-label">EXPERIENCE</span>
+
+          <h3>Enter the World of Stackly</h3>
+
+          <p>
+            Connect with creators, discover ideas,
+            build relationships and experience something memorable.
+          </p>
+
+          <a href="error.html" class="how-step-link">
+            Start Exploring
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================
+     FEATURED EXHIBITION SPOTLIGHT
+========================================== -->
+<section class="spotlight-section">
+
+  <div class="spotlight-image">
+
+    <img
+      src="images/home4.webp"
+      alt="Premium art exhibition">
+
+    <div class="spotlight-image-overlay"></div>
+
+    <div class="spotlight-image-caption">
+      <span>FEATURED EXHIBITION</span>
+      <strong>01 / 05</strong>
+    </div>
+
+  </div>
+
+
+  <div class="spotlight-content">
+
+    <span class="premium-eyebrow">
+      EDITOR'S SELECTION
+    </span>
+
+    <h2>
+      The Future of
+      <span>Creative Culture.</span>
+    </h2>
+
+    <p class="spotlight-description">
+      Step into a world where art, design, technology and
+      culture come together. Discover new perspectives from
+      emerging creators and established names.
+    </p>
+
+
+    <div class="spotlight-details">
+
+      <div class="spotlight-detail">
+        <span>LOCATION</span>
+        <strong>London · UK</strong>
+      </div>
+
+      <div class="spotlight-detail">
+        <span>DATE</span>
+        <strong>18 — 22 OCT 2026</strong>
+      </div>
+
+      <div class="spotlight-detail">
+        <span>CATEGORY</span>
+        <strong>Art & Culture</strong>
+      </div>
+
+    </div>
+
+
+    <div class="spotlight-actions">
+
+      <a href="error.html" class="btn btn-primary">
+        View Exhibition
+        <span>→</span>
+      </a>
+
+      <a href="error.html" class="spotlight-text-link">
+        Exhibition Details
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== SECTION 5: CATEGORIES ===== -->
+  <section class="section categories-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Explore by Category</h2>
+        <div class="accent-line"></div>
+        <p>Find the perfect exhibition type for your brand or passion.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card reveal-scale" style="--cat-color:#d4915e">
+          <div class="cat-icon">🖼️</div>
+          <h3>Art &amp; Culture</h3>
+          <p>45 active exhibitions</p>
+        </div>
+        <div class="category-card reveal-scale reveal-delay-1" style="--cat-color:#2a7b7b">
+          <div class="cat-icon">📦</div>
+          <h3>Trade &amp; Commerce</h3>
+          <p>38 active exhibitions</p>
+        </div>
+        <div class="category-card reveal-scale reveal-delay-2" style="--cat-color:#e8c547">
+          <div class="cat-icon">🔬</div>
+          <h3>Technology</h3>
+          <p>29 active exhibitions</p>
+        </div>
+        <div class="category-card reveal-scale reveal-delay-3" style="--cat-color:#4a9d5f">
+          <div class="cat-icon">🌿</div>
+          <h3>Sustainability</h3>
+          <p>18 active exhibitions</p>
+        </div>
+        <div class="category-card reveal-scale reveal-delay-4" style="--cat-color:#c75450">
+          <div class="cat-icon">👗</div>
+          <h3>Fashion &amp; Design</h3>
+          <p>22 active exhibitions</p>
+        </div>
+        <div class="category-card reveal-scale reveal-delay-5" style="--cat-color:#9b6dc9">
+          <div class="cat-icon">🍴</div>
+          <h3>Food &amp; Beverage</h3>
+          <p>15 active exhibitions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================
+     PREMIUM SECTION 1: EDITOR'S CHOICE
+     ========================================================= -->
+<section class="editor-choice-section">
+  <div class="editor-choice-bg"></div>
+  <div class="editor-choice-overlay"></div>
+
+  <div class="container editor-choice-content">
+    <div class="editor-label reveal">
+      <span></span>
+      EDITOR'S CHOICE
+    </div>
+
+    <div class="editor-layout">
+
+      <div class="editor-copy reveal-left">
+        <p class="editor-kicker">THE EXHIBITION OF THE SEASON</p>
+
+        <h2>
+          Where Great Ideas
+          <em>Meet the World.</em>
+        </h2>
+
+        <p class="editor-description">
+          Step into a carefully curated world of books, culture,
+          publishing and creative discovery. Meet celebrated authors,
+          independent publishers and passionate readers under one roof.
+        </p>
+
+        <div class="editor-meta">
+          <div>
+            <span>DATE</span>
+            <strong>18 — 24 OCT 2026</strong>
+          </div>
+
+          <div>
+            <span>LOCATION</span>
+            <strong>London · UK</strong>
+          </div>
+        </div>
+
+        <a href="error.html" class="editor-link">
+          Discover the exhibition
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="editor-card reveal-right">
+        <div class="editor-card-image">
+          <img
+            src="images/home5.webp"
+            alt="Premium book exhibition"
+          >
+        </div>
+
+        <div class="editor-card-bottom">
+          <span>Stackly 2026</span>
+          <strong>International Book & Culture Fair</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     PREMIUM SECTION 2: EXPERIENCE
+     ========================================================= -->
+<section class="experience-section section">
+
+  <div class="container">
+
+    <div class="premium-section-heading reveal">
+      <span>THE Stackly EXPERIENCE</span>
+      <h2>More Than an Exhibition.</h2>
+      <p>
+        A premium environment designed for discovery, connection
+        and unforgettable encounters.
+      </p>
+    </div>
+
+    <div class="experience-grid">
+
+      <div class="experience-image reveal-left">
+        <img
+          src="images/home6.webp"
+          alt="Library exhibition experience"
+        >
+
+        <div class="experience-image-caption">
+          <span>01</span>
+          A space for curious minds
+        </div>
+      </div>
+
+      <div class="experience-content reveal-right">
+
+        <div class="experience-item">
+          <span>01</span>
+          <div>
+            <h3>Discover Rare Collections</h3>
+            <p>
+              Explore carefully selected books, manuscripts,
+              publications and cultural collections from around the world.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span>02</span>
+          <div>
+            <h3>Meet Creative Minds</h3>
+            <p>
+              Connect with authors, publishers, collectors,
+              independent creators and cultural institutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span>03</span>
+          <div>
+            <h3>Build Your Presence</h3>
+            <p>
+              Reserve a premium exhibition space and present your
+              collection in front of an engaged global audience.
+            </p>
+          </div>
+        </div>
+
+        <a href="error.html" class="btn btn-primary experience-btn">
+          Reserve Your Space
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREMIUM SECTION 3: CURATED COLLECTIONS
+     ========================================================= -->
+<section class="collections-section section">
+
+  <div class="container">
+
+    <div class="premium-section-heading reveal">
+      <span>CURATED COLLECTIONS</span>
+      <h2>Explore a World of Stories.</h2>
+      <p>
+        Discover exhibitions shaped around ideas, cultures,
+        disciplines and extraordinary collections.
+      </p>
+    </div>
+
+    <div class="collections-grid">
+
+      <a href="error.html" class="collection-card collection-large reveal-scale">
+        <img
+          src="images/home7.webp"
+          alt="Literature collection"
+        >
+
+        <div class="collection-overlay"></div>
+
+        <div class="collection-content">
+          <span>01 · LITERATURE</span>
+          <h3>Worlds<br>Between Pages</h3>
+          <p>42 exhibitions</p>
+        </div>
+      </a>
+
+
+      <a href="error.html" class="collection-card reveal-scale reveal-delay-1">
+        <img
+          src="images/home8.webp"
+          alt="Rare books collection"
+        >
+
+        <div class="collection-overlay"></div>
+
+        <div class="collection-content">
+          <span>02 · HERITAGE</span>
+          <h3>Rare &<br>Timeless</h3>
+          <p>28 exhibitions</p>
+        </div>
+      </a>
+
+
+      <a href="error.html" class="collection-card reveal-scale reveal-delay-2">
+        <img
+          src="images/home9.webp"
+          alt="Contemporary books"
+        >
+
+        <div class="collection-overlay"></div>
+
+        <div class="collection-content">
+          <span>03 · CONTEMPORARY</span>
+          <h3>New Voices<br>New Ideas</h3>
+          <p>35 exhibitions</p>
+        </div>
+      </a>
+
+
+      <a href="error.html" class="collection-card reveal-scale reveal-delay-3">
+        <img
+          src="images/home10.webp"
+          alt="Knowledge collection"
+        >
+
+        <div class="collection-overlay"></div>
+
+        <div class="collection-content">
+          <span>04 · KNOWLEDGE</span>
+          <h3>Ideas That<br>Shape Tomorrow</h3>
+          <p>31 exhibitions</p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREMIUM SECTION 4: UPCOMING
+     ========================================================= -->
+<section class="upcoming-section section">
+
+  <div class="container">
+
+    <div class="premium-section-heading reveal">
+      <span>COMING UP</span>
+      <h2>Mark Your Calendar.</h2>
+      <p>
+        A selection of upcoming exhibitions worth making room for.
+      </p>
+    </div>
+
+    <div class="upcoming-list">
+
+      <div class="upcoming-item reveal-left">
+        <div class="upcoming-date">
+          <strong>12</strong>
+          <span>SEP</span>
+        </div>
+
+        <div class="upcoming-info">
+          <span>BOOKS · NEW YORK</span>
+          <h3>New York International Book Fair</h3>
+          <p>
+            Independent publishers, literary houses and collectors
+            come together for a week of discovery.
+          </p>
+        </div>
+
+        <a href="error.html" class="upcoming-arrow">↗</a>
+      </div>
+
+
+      <div class="upcoming-item reveal-left reveal-delay-1">
+        <div class="upcoming-date">
+          <strong>04</strong>
+          <span>OCT</span>
+        </div>
+
+        <div class="upcoming-info">
+          <span>CULTURE · PARIS</span>
+          <h3>Paris Literature & Culture Week</h3>
+          <p>
+            A celebration of literature, art, publishing and
+            cultural heritage.
+          </p>
+        </div>
+
+        <a href="error.html" class="upcoming-arrow">↗</a>
+      </div>
+
+
+      <div class="upcoming-item reveal-left reveal-delay-2">
+        <div class="upcoming-date">
+          <strong>18</strong>
+          <span>NOV</span>
+        </div>
+
+        <div class="upcoming-info">
+          <span>ART · TOKYO</span>
+          <h3>Tokyo Art & Book Experience</h3>
+          <p>
+            Where contemporary visual culture meets the world
+            of independent publishing.
+          </p>
+        </div>
+
+        <a href="error.html" class="upcoming-arrow">↗</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREMIUM SECTION 5: GLOBAL CITIES
+     ========================================================= -->
+<section class="cities-section">
+
+  <div class="cities-background"></div>
+
+  <div class="container cities-content">
+
+    <div class="premium-section-heading light reveal">
+      <span>EXHIBITIONS AROUND THE WORLD</span>
+      <h2>Meet Us in the World's<br><em>Cultural Capitals.</em></h2>
+      <p>
+        Explore remarkable exhibitions in cities where books,
+        creativity and culture come alive.
+      </p>
+    </div>
+
+    <div class="cities-grid">
+
+      <a href="error.html" class="city-card reveal-scale">
+        <img
+          src="images/home11.webp"
+          alt="London"
+        >
+        <div>
+          <span>UNITED KINGDOM</span>
+          <h3>London</h3>
+        </div>
+      </a>
+
+      <a href="error.html" class="city-card reveal-scale reveal-delay-1">
+        <img
+          src="images/about4.webp"
+          alt="Paris"
+        >
+        <div>
+          <span>FRANCE</span>
+          <h3>Paris</h3>
+        </div>
+      </a>
+
+      <a href="error.html" class="city-card reveal-scale reveal-delay-2">
+        <img
+          src="images/home13.webp"
+          alt="Tokyo"
+        >
+        <div>
+          <span>JAPAN</span>
+          <h3>Tokyo</h3>
+        </div>
+      </a>
+
+      <a href="error.html" class="city-card reveal-scale reveal-delay-3">
+        <img
+          src="images/home14.webp"
+          alt="New York"
+        >
+        <div>
+          <span>UNITED STATES</span>
+          <h3>New York</h3>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREMIUM SECTION 6: EXHIBITOR CTA
+     ========================================================= -->
+<section class="premium-cta-section">
+
+  <div class="premium-cta-image"></div>
+  <div class="premium-cta-overlay"></div>
+
+  <div class="container premium-cta-content reveal-scale">
+
+    <span class="premium-cta-label">
+      FOR PUBLISHERS · COLLECTORS · BRANDS
+    </span>
+
+    <h2>
+      Your Collection
+      <em>Deserves a Stage.</em>
+    </h2>
+
+    <p>
+      Put your books, ideas and creative work in front of
+      an audience that comes to discover something extraordinary.
+    </p>
+
+    <div class="premium-cta-buttons">
+      <a href="error.html" class="btn btn-primary">
+        Book an Exhibition Stall
+      </a>
+
+      <a href="error.html" class="btn btn-secondary">
+        Talk to Our Team
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== SECTION 6: TESTIMONIALS ===== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>What Our Exhibitors Say</h2>
+        <div class="accent-line"></div>
+        <p>Trusted by artists, brands, and organizations worldwide.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="quote-mark">&ldquo;</div>
+          <p>Stackly made booking our stall effortless. The platform is intuitive and the support team was outstanding throughout the entire exhibition.</p>
+          <div class="testimonial-author">
+            <img src="images/team1.webp" alt="Elena Rossi">
+            <div>
+              <h4>Elena Rossi</h4>
+              <span>Gallery Owner, Milan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="quote-mark">&ldquo;</div>
+          <p>We booked three trade show stalls through Stackly last year. The floor plan selection tool saved us hours of back-and-forth negotiation.</p>
+          <div class="testimonial-author">
+            <img src="images/team2.webp" alt="James Carter">
+            <div>
+              <h4>James Carter</h4>
+              <span>VP Marketing, TechFlow</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="quote-mark">&ldquo;</div>
+          <p>As an independent artist, I never thought I could exhibit internationally. Stackly connected me to galleries I could only dream of before.</p>
+          <div class="testimonial-author">
+            <img src="images/team3.webp" alt="Aisha Khan">
+            <div>
+              <h4>Aisha Khan</h4>
+              <span>Independent Artist, Dubai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-overlay"></div>
+    <div class="container cta-content reveal-scale">
+      <h2>Ready to Showcase Your Work?</h2>
+      <p>Join thousands of exhibitors who trust Stackly to bring their vision to the world stage.</p>
+      <a href="error.html" class="btn btn-primary">Book Your Stall Today</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>The world's leading platform for discovering and booking exhibition stalls. Connecting artists, brands, and venues since 2018.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></i></a>
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></i></a>
+            <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="booking.html">Book a Stall</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Terms&Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="booking.html">Booking Guide</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <form class="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                aria-label="Email address"
+                required
+              >
+              <button type="submit" aria-label="Subscribe">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved. Designed for exhibitors worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

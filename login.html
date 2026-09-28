@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Stackly</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- Login CSS -->
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <main class="login-page">
+
+    <!-- =========================================
+         LEFT VISUAL PANEL
+         ========================================= -->
+    <section class="login-visual">
+
+      <div class="login-visual-bg"></div>
+      <div class="login-visual-overlay"></div>
+
+      <div class="visual-content">
+
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+
+        <div class="visual-text">
+
+          <span class="visual-eyebrow">
+            Stackly EXHIBITOR PORTAL
+          </span>
+
+          <h1>
+            Your Exhibition.
+            <br>
+            Your <span>Stage.</span>
+          </h1>
+
+          <p>
+            Manage exhibitions, stalls, bookings and your
+            exhibition presence from one place.
+          </p>
+
+        </div>
+
+        <div class="visual-bottom">
+
+          <div class="visual-feature">
+            <i class="fas fa-building-columns"></i>
+            <div>
+              <strong>Global Exhibitions</strong>
+              <span>Manage your presence worldwide</span>
+            </div>
+          </div>
+
+          <div class="visual-feature">
+            <i class="fas fa-chart-line"></i>
+            <div>
+              <strong>Easy Management</strong>
+              <span>Everything in one dashboard</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         RIGHT LOGIN PANEL
+         ========================================= -->
+    <section class="login-panel">
+
+      <div class="login-box">
+
+        <!-- Mobile Logo -->
+        <a href="index.html" class="mobile-login-logo">
+          Expo<span>Art</span>
+        </a>
+
+
+        <!-- Heading -->
+        <div class="login-heading">
+
+          <span class="login-eyebrow">
+            WELCOME BACK
+          </span>
+
+          <h2>Sign in to Stackly</h2>
+
+          <p>
+            Select your account type and enter your credentials
+            to continue.
+          </p>
+
+        </div>
+
+
+        <!-- =====================================
+             ROLE SELECTOR
+             ===================================== -->
+        <div class="role-selector">
+
+          <button
+            type="button"
+            class="role-card active"
+            data-role="admin">
+
+            <span class="role-icon">
+              <i class="fas fa-shield-halved"></i>
+            </span>
+
+            <span class="role-info">
+              <strong>Admin</strong>
+              <small>Manage Stackly</small>
+            </span>
+
+            <span class="role-check">
+              <i class="fas fa-check"></i>
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="role-card"
+            data-role="exhibitor">
+
+            <span class="role-icon">
+              <i class="fas fa-store"></i>
+            </span>
+
+            <span class="role-info">
+              <strong>Exhibitor</strong>
+              <small>Manage your stalls</small>
+            </span>
+
+            <span class="role-check">
+              <i class="fas fa-check"></i>
+            </span>
+
+          </button>
+
+        </div>
+
+
+        <!-- Selected Role -->
+        <div class="selected-role">
+          <i class="fas fa-shield-halved" id="selectedRoleIcon"></i>
+
+          <span>
+            Signing in as
+            <strong id="selectedRoleText">Admin</strong>
+          </span>
+        </div>
+
+
+        <!-- =====================================
+             LOGIN FORM
+             ===================================== -->
+        <form id="loginForm" class="login-form" novalidate>
+
+          <!-- Email -->
+          <div class="form-group">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <div class="input-wrapper">
+
+              <i class="fas fa-envelope"></i>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required>
+
+            </div>
+
+            <small class="error-message" id="emailError"></small>
+
+          </div>
+
+
+          <!-- Password -->
+          <div class="form-group">
+
+            <div class="label-row">
+
+              <label for="password">
+                Password
+              </label>
+
+              <a href="#" id="forgotPassword">
+                Forgot password?
+              </a>
+
+            </div>
+
+            <div class="input-wrapper">
+
+              <i class="fas fa-lock"></i>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required>
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="passwordToggle"
+                aria-label="Show password">
+
+                <i class="fas fa-eye"></i>
+
+              </button>
+
+            </div>
+
+            <small class="error-message" id="passwordError"></small>
+
+          </div>
+
+
+          <!-- Remember -->
+          <div class="form-options">
+
+            <label class="remember-label">
+
+              <input
+                type="checkbox"
+                id="rememberMe">
+
+              <span class="custom-checkbox"></span>
+
+              Remember me
+
+            </label>
+
+          </div>
+
+
+          <!-- Error / Success -->
+          <div class="login-message" id="loginMessage"></div>
+
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="login-submit"
+            id="loginSubmit">
+
+            <span class="submit-text">
+              Sign In
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+            <span class="submit-loading">
+              <i class="fas fa-spinner fa-spin"></i>
+              Signing in...
+            </span>
+
+          </button>
+
+        </form>
+
+
+        <!-- Security Note -->
+<div class="security-note">
+
+  <i class="fas fa-lock"></i>
+
+  <span>
+    Secure access to your Stackly account
+  </span>
+
+</div>
+
+
+<!-- Signup Link -->
+<div class="signup-link">
+  <span>Don't have an account?</span>
+  <a href="signup.html">Create an account</a>
+</div>
+
+
+<!-- Back -->
+<a href="index.html" class="back-home">
+  <i class="fas fa-arrow-left"></i>
+  Back to Stackly
+</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>

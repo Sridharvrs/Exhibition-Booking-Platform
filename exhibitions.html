@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exhibitions — Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/exhibitions.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="booking.html">Book a Stall</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="drawer-close" aria-label="Close">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="booking.html">Book a Stall</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="nav-cta">Login</a>
+
+    <!-- ===== DRAWER CONTACT DETAILS ===== -->
+    <div class="drawer-contact">
+
+      <div class="drawer-contact-title">
+        <span>CONTACT US</span>
+      </div>
+
+      <a href="tel:+18005550198" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-phone"></i>
+        </span>
+        <span>
+          <small>Call Us</small>
+          +1 800 555 0198
+        </span>
+      </a>
+
+      <a href="mailto:hello@Stackly.com" class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span>
+          <small>Email</small>
+          hello@Stackly.com
+        </span>
+      </a>
+
+      <div class="drawer-contact-item">
+        <span class="drawer-contact-icon">
+          <i class="fas fa-location-dot"></i>
+        </span>
+        <span>
+          <small>Studio</small>
+          Berlin, Germany
+        </span>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- ===== SECTION 1: PAGE BANNER ===== -->
+  <section class="page-banner">
+    <div class="banner-bg"></div>
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+      <h1 class="reveal-scale">Our Exhibitions</h1>
+      <p class="reveal reveal-delay-1">Discover curated exhibitions from around the globe — art, trade, technology, and more.</p>
+      <div class="breadcrumb reveal reveal-delay-2"><a href="index.html">Home</a> / <span>Exhibitions</span></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: FILTER BAR ===== -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="art">Art</button>
+        <button class="filter-btn" data-filter="trade">Trade</button>
+        <button class="filter-btn" data-filter="tech">Technology</button>
+        <button class="filter-btn" data-filter="heritage">Heritage</button>
+        <button class="filter-btn" data-filter="fashion">Fashion</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: EXHIBITION GRID ===== -->
+  <section class="section exhib-grid-section" id="exhibGrid">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Upcoming Exhibitions</h2>
+        <div class="accent-line"></div>
+        <p>Browse all scheduled exhibitions and find the one that fits your vision.</p>
+      </div>
+      <div class="exhib-grid">
+        <div class="exhib-card reveal-scale" data-category="art">
+          <div class="exhib-img-wrap">
+            <img src="images/booking1.webp" alt="Contemporary Art Fair">
+            <span class="exhib-cat-badge">Art</span>
+            <span class="exhib-status">Open</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Contemporary Art Fair 2026</h3>
+            <p class="exhib-loc">Berlin, Germany</p>
+            <p class="exhib-date">Mar 15 — Mar 22, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $450</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+        <div class="exhib-card reveal-scale reveal-delay-1" data-category="trade">
+          <div class="exhib-img-wrap">
+            <img src="images/home2.webp" alt="Global Trade Expo">
+            <span class="exhib-cat-badge">Trade</span>
+            <span class="exhib-status">Open</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Global Trade Expo</h3>
+            <p class="exhib-loc">Shanghai, China</p>
+            <p class="exhib-date">Apr 5 — Apr 12, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $680</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+        <div class="exhib-card reveal-scale reveal-delay-2" data-category="heritage">
+          <div class="exhib-img-wrap">
+            <img src="images/home3.webp" alt="Classical Heritage Show">
+            <span class="exhib-cat-badge">Heritage</span>
+            <span class="exhib-status">Open</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Classical Heritage Show</h3>
+            <p class="exhib-loc">Paris, France</p>
+            <p class="exhib-date">May 18 — May 25, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $520</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+        <div class="exhib-card reveal-scale reveal-delay-3" data-category="tech">
+          <div class="exhib-img-wrap">
+            <img src="images/booking4.webp" alt="Tech Innovation Summit">
+            <span class="exhib-cat-badge">Technology</span>
+            <span class="exhib-status">Filling Fast</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Tech Innovation Summit</h3>
+            <p class="exhib-loc">Tokyo, Japan</p>
+            <p class="exhib-date">Jun 3 — Jun 8, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $750</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+        <div class="exhib-card reveal-scale reveal-delay-4" data-category="fashion">
+          <div class="exhib-img-wrap">
+            <img src="images/exhibition1.webp" alt="Fashion Week Exhibition">
+            <span class="exhib-cat-badge">Fashion</span>
+            <span class="exhib-status">Open</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Fashion Week Exhibition</h3>
+            <p class="exhib-loc">Milan, Italy</p>
+            <p class="exhib-date">Jul 12 — Jul 18, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $590</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+        <div class="exhib-card reveal-scale reveal-delay-5" data-category="art">
+          <div class="exhib-img-wrap">
+            <img src="images/exhibition2.webp" alt="Digital Art Showcase">
+            <span class="exhib-cat-badge">Art</span>
+            <span class="exhib-status">Coming Soon</span>
+          </div>
+          <div class="exhib-body">
+            <h3>Digital Art Showcase</h3>
+            <p class="exhib-loc">Budapest, Hungary</p>
+            <p class="exhib-date">Aug 20 — Aug 27, 2026</p>
+            <div class="exhib-footer">
+              <span class="exhib-price">From $380</span>
+              <a href="error.html" class="btn btn-primary btn-sm">Book Stall</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="no-results" id="noResults" style="display:none;">
+        <p>No exhibitions found in this category.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== PREMIUM SECTION: FEATURED EXPERIENCE ===== -->
+<section class="experience-banner">
+
+  <div class="experience-bg"></div>
+  <div class="experience-overlay"></div>
+
+  <div class="container experience-container">
+
+    <div class="experience-content reveal-left">
+
+      <span class="experience-eyebrow">
+        THE Stackly EXPERIENCE
+      </span>
+
+      <h2>
+        Where Every
+        <span>Exhibition Tells a Story.</span>
+      </h2>
+
+      <p>
+        Step into extraordinary spaces where art, innovation,
+        culture and commerce come together. Discover exhibitions
+        designed to inspire, connect and leave a lasting impression.
+      </p>
+
+      <div class="experience-meta">
+
+        <div>
+          <span>01</span>
+          <strong>Discover</strong>
+          <small>Curated exhibitions</small>
+        </div>
+
+        <div>
+          <span>02</span>
+          <strong>Connect</strong>
+          <small>Global communities</small>
+        </div>
+
+        <div>
+          <span>03</span>
+          <strong>Experience</strong>
+          <small>Unforgettable moments</small>
+        </div>
+
+      </div>
+
+      <a href="error.html" class="btn btn-primary">
+        Explore the Experience
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== SECTION 4: HIGHLIGHT BANNER ===== -->
+  <section class="highlight-section">
+    <div class="container">
+      <div class="highlight-card reveal-scale">
+        <div class="highlight-text">
+          <span class="highlight-tag">Featured Event</span>
+          <h2>The Grand Art Biennale 2026</h2>
+          <p>The largest curated art exhibition of the year, featuring 300+ artists from 35 countries across 12 gallery halls. Limited premium stalls available.</p>
+          <ul class="highlight-features">
+            <li><span class="check-icon">&#10003;</span> 300+ participating artists</li>
+            <li><span class="check-icon">&#10003;</span> 12 themed gallery halls</li>
+            <li><span class="check-icon">&#10003;</span> Expected 15,000+ visitors</li>
+            <li><span class="check-icon">&#10003;</span> International press coverage</li>
+          </ul>
+          <a href="error.html" class="btn btn-primary">Reserve Your Stall</a>
+        </div>
+        <div class="highlight-img">
+          <img src="images/painting.webp" alt="Grand Art Biennale">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== PREMIUM SECTION: EXHIBITION JOURNEY ===== -->
+<section class="journey-banner">
+
+  <div class="journey-image"></div>
+  <div class="journey-overlay"></div>
+
+  <div class="container">
+
+    <div class="journey-layout">
+
+      <div class="journey-heading reveal-left">
+
+        <span>FROM DISCOVERY TO OPENING NIGHT</span>
+
+        <h2>
+          Your Exhibition
+          <em>Journey.</em>
+        </h2>
+
+        <p>
+          Everything begins with an idea. Stackly helps turn
+          that idea into a destination where people can discover,
+          connect and experience something extraordinary.
+        </p>
+
+      </div>
+
+
+      <div class="journey-steps">
+
+        <div class="journey-step reveal-right">
+
+          <div class="journey-step-number">
+            01
+          </div>
+
+          <div>
+            <h3>Choose Your Exhibition</h3>
+
+            <p>
+              Explore exhibitions across art, trade,
+              technology, heritage and fashion.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="journey-step reveal-right reveal-delay-1">
+
+          <div class="journey-step-number">
+            02
+          </div>
+
+          <div>
+            <h3>Select Your Stall</h3>
+
+            <p>
+              Find a space that fits your brand,
+              collection or exhibition concept.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="journey-step reveal-right reveal-delay-2">
+
+          <div class="journey-step-number">
+            03
+          </div>
+
+          <div>
+            <h3>Prepare Your Presence</h3>
+
+            <p>
+              Plan your exhibition experience and
+              prepare to meet a global audience.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="journey-step reveal-right reveal-delay-3">
+
+          <div class="journey-step-number">
+            04
+          </div>
+
+          <div>
+            <h3>Open Your Doors</h3>
+
+            <p>
+              Welcome visitors and bring your
+              exhibition vision to life.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== SECTION 5: TIMELINE ===== -->
+  <section class="section timeline-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Exhibition Calendar 2026</h2>
+        <div class="accent-line"></div>
+        <p>A quick look at our major exhibitions throughout the year.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">March 2026</span>
+            <h3>Contemporary Art Fair</h3>
+            <p>Berlin, Germany — 7 days</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">April 2026</span>
+            <h3>Global Trade Expo</h3>
+            <p>Shanghai, China — 7 days</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">May 2026</span>
+            <h3>Classical Heritage Show</h3>
+            <p>Paris, France — 7 days</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left reveal-delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">June 2026</span>
+            <h3>Tech Innovation Summit</h3>
+            <p>Tokyo, Japan — 5 days</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left reveal-delay-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">July 2026</span>
+            <h3>Fashion Week Exhibition</h3>
+            <p>Milan, Italy — 6 days</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left reveal-delay-5">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">August 2026</span>
+            <h3>Digital Art Showcase</h3>
+            <p>Budapest, Hungary — 7 days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== PREMIUM SECTION: GLOBAL MOMENTS ===== -->
+<section class="moments-section">
+
+  <div class="container">
+
+    <div class="moments-header reveal">
+
+      <span>EXPLORE THE WORLD</span>
+
+      <h2>Moments From Our Exhibitions</h2>
+
+      <p>
+        From grand halls to intimate galleries,
+        every destination creates a different story.
+      </p>
+
+    </div>
+
+
+    <div class="moments-gallery">
+
+      <div class="moment moment-large reveal-left">
+
+        <img
+          src="images/about6.webp"
+          alt="Art exhibition">
+
+        <div class="moment-overlay">
+          <span>ART</span>
+          <h3>Ideas in Motion</h3>
+          <p>Berlin · Germany</p>
+        </div>
+
+      </div>
+
+
+      <div class="moment reveal-scale">
+
+        <img
+          src="images/home13.webp"
+          alt="Tokyo exhibition">
+
+        <div class="moment-overlay">
+          <span>TECHNOLOGY</span>
+          <h3>Future Forward</h3>
+          <p>Tokyo · Japan</p>
+        </div>
+
+      </div>
+
+
+      <div class="moment reveal-right">
+
+        <img
+          src="images/about4.webp"
+          alt="Paris exhibition">
+
+        <div class="moment-overlay">
+          <span>CULTURE</span>
+          <h3>Timeless Stories</h3>
+          <p>Paris · France</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== SECTION 6: VENUE PARTNERS ===== -->
+  <section class="section venues-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Venue Partners</h2>
+        <div class="accent-line"></div>
+        <p>World-class venues hosting our exhibitions across the globe.</p>
+      </div>
+      <div class="venues-grid">
+        <div class="venue-card reveal-scale">
+          <img src="images/area1.webp" alt="Tokyo Big Sight">
+          <h3>Tokyo Big Sight</h3>
+          <p>Tokyo, Japan</p>
+        </div>
+        <div class="venue-card reveal-scale reveal-delay-1">
+          <img src="images/area2.webp" alt="Denver Convention Center">
+          <h3>Denver Convention Center</h3>
+          <p>Denver, USA</p>
+        </div>
+        <div class="venue-card reveal-scale reveal-delay-2">
+          <img src="images/area3.webp" alt="Shanghai Exhibition Center">
+          <h3>Shanghai Exhibition Center</h3>
+          <p>Shanghai, China</p>
+        </div>
+        <div class="venue-card reveal-scale reveal-delay-3">
+          <img src="images/about1.webp" alt="Modern Art Museum">
+          <h3>Modern Art Museum</h3>
+          <p>Berlin, Germany</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="container newsletter-wrap reveal-scale">
+      <div class="newsletter-text">
+        <h2>Never Miss an Exhibition</h2>
+        <p>Subscribe to get notified about new exhibitions and early-bird booking discounts.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="newsletter-msg" id="newsletterMsg"></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>The world's leading platform for discovering and booking exhibition stalls. Connecting artists, brands, and venues since 2018.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></i></a>
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></i></a>
+            <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="booking.html">Book a Stall</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Terms&Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="booking.html">Booking Guide</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <form class="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                aria-label="Email address"
+                required
+              >
+              <button type="submit" aria-label="Subscribe">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved. Designed for exhibitors worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/exhibitions.js"></script>
+</body>
+</html>
