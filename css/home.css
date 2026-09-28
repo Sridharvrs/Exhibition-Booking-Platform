@@ -442,6 +442,10 @@
   .cta-section {
     background-attachment: scroll;
   }
+
+  .hero-tag{
+    margin-top: 130px;
+  }
 }
 
 
