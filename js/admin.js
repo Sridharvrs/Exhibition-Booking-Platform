@@ -181,9 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach(function(b){
         var tr = document.createElement("tr");
         var actionsHtml = b.status === "pending"
-          ? "<button class=\"row-btn approve\" data-act=\"approve\" data-id=\"" + b.id + "\">Approve</button> " +
-            "<button class=\"row-btn reject\" data-act=\"reject\" data-id=\"" + b.id + "\">Reject</button>"
-          : "<button class=\"row-btn\">View</button>";
+  ? "<button class=\"row-btn approve\" data-act=\"approve\" data-id=\"" + b.id + "\" onclick=\"window.location.href='dashboardError.html'\">Approve</button> " +
+    "<button class=\"row-btn reject\" data-act=\"reject\" data-id=\"" + b.id + "\" onclick=\"window.location.href='dashboardError.html'\">Reject</button>"
+  : "<button class=\"row-btn\">View</button>";
         tr.innerHTML =
           "<td><strong>" + b.id + "</strong></td>" +
           "<td>" + b.exhibitor + "</td>" +
