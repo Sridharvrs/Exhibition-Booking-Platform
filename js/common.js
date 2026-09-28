@@ -16,17 +16,30 @@ function initNavbarScroll() {
 }
 
 /* ---------- Mobile drawer toggle ---------- */
+/* ---------- Mobile drawer toggle ---------- */
 function initMobileDrawer() {
   const toggle = document.querySelector(".nav-toggle");
   const drawer = document.querySelector(".mobile-drawer");
   const overlay = document.querySelector(".drawer-overlay");
   const drawerClose = document.querySelector(".drawer-close");
+
   if (!toggle || !drawer || !overlay) return;
 
+  let scrollPosition = 0;
+
   function openDrawer() {
+    scrollPosition = window.scrollY;
+
     drawer.classList.add("open");
     overlay.classList.add("visible");
     toggle.classList.add("active");
+
+    /* Lock background scroll */
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
     document.body.style.overflow = "hidden";
   }
 
@@ -34,11 +47,24 @@ function initMobileDrawer() {
     drawer.classList.remove("open");
     overlay.classList.remove("visible");
     toggle.classList.remove("active");
+
+    /* Restore background scroll */
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
     document.body.style.overflow = "";
+
+    window.scrollTo(0, scrollPosition);
   }
 
   toggle.addEventListener("click", openDrawer);
-  if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
+
+  if (drawerClose) {
+    drawerClose.addEventListener("click", closeDrawer);
+  }
+
   overlay.addEventListener("click", closeDrawer);
 
   drawer.querySelectorAll("a").forEach(function (link) {

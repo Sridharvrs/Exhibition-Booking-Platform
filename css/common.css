@@ -1062,3 +1062,22 @@ footer .newsletter-col small {
 footer .newsletter-col small i {
   color: var(--primary);
 }
+
+/* ============================================
+   NAVBAR LOGIN BUTTON - DESKTOP
+   ============================================ */
+
+.nav-links > li:last-child .nav-cta {
+  padding: 10px 14px;
+  margin-left: 4px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links > li:last-child {
+  margin-right: 4px;
+}
